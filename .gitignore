@@ -1,0 +1,6 @@
+/my_venv
+.env
+/__pycache__
+/app/__pychache__
+/auth/__pychache__
+/ecom__pychache__

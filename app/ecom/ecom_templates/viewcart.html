@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        {% for cart_items in cart %}
+            <a href='{{ url_for("ecom.viewCart", cart_id=cart.id) }}' class="card" style="width: 18rem;">
+                <img src="{{ cart.image }}" class="card-img-top" alt="{{ cart.title }}">
+                <div class="card-body">
+                <h5 class="card-title">{{ cart.title }}</h5>
+                <p class="card-text">{{ cart.caption }}</p>
+                <p class="card-text">{{ cart.price}} </p>
+                </div>
+            </a>
+
+
+        {% endfor %}
+
+        Total:
+        {total=0}
+        {% for cart.price in cart %}
+        {total+=cart.price}
+        {return total}
+        {% end for %}
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST" style="width:500px;margin-left:auto;margin-right:auto;">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <br>
+        <fieldset>
+            {{ form.title.label }}
+            {{ form.title(class='form-control', placeholder='Title') }}
+        </fieldset>
+        <fieldset>
+            {{ form.img_url.label }}
+            {{ form.img_url(class='form-control', placeholder='Image URL') }}
+        </fieldset>
+        <fieldset>
+            {{ form.caption.label }}
+            {{ form.caption(class='form-control', placeholder='Caption') }}
+        </fieldset>
+        <fieldset>
+            {{ form.price.label }}
+            {{ form.price(class='form-control', placeholder='Price') }}
+        </fieldset>
+        <br>
+        {{ form.submit(class='btn btn-primary') }}
+
+    </div>
+</form>
+
+{% endblock content %}
